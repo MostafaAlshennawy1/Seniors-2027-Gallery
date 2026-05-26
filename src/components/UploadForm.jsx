@@ -121,32 +121,6 @@ const UploadForm = () => {
             <div className="image-result">
               <img src={uploadedUrl} alt="Uploaded" className="result-img" />
             </div>
-            
-            <div className="link-box">
-              <input type="text" readOnly value={uploadedUrl} className="link-input" />
-              <button 
-                type="button" 
-                className="btn btn-secondary"
-                onClick={() => {
-                  navigator.clipboard.writeText(uploadedUrl);
-                  toast.success('Link copied!');
-                }}
-              >
-                Copy Link
-              </button>
-            </div>
-
-            <button 
-              type="button" 
-              className="btn btn-primary mt-4"
-              onClick={() => {
-                clearSelection();
-                setName('');
-                setBranch('');
-              }}
-            >
-              Upload Another
-            </button>
           </div>
         ) : (
           <>
