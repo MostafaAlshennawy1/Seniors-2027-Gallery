@@ -2,61 +2,30 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 64px;
-}
-
-/* Fun bubbly background decorations */
-.app-wrapper::before,
-.app-wrapper::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  filter: blur(60px);
-  opacity: 0.6;
-}
-
-.app-wrapper::before {
-  top: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background-color: var(--primary-container);
-}
-
-.app-wrapper::after {
-  bottom: -50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  background-color: var(--secondary-container);
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top right, var(--surface-container-high), var(--surface));
 }
 
 .header {
-  padding: 64px 0 40px;
   text-align: center;
-  position: relative;
-  z-index: 10;
+  margin-bottom: 40px;
 }
 
 .header-icon {
+  color: var(--primary);
   margin-bottom: 16px;
-  color: var(--tertiary);
-  animation: bounce-soft 3s infinite ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .subtitle {
-  color: var(--outline);
+  color: var(--on-surface-variant);
   margin-top: 8px;
-}
-
-@keyframes bounce-soft {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
