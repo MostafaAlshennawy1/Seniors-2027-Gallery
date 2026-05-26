@@ -1,0 +1,31 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top right, var(--surface-container-high), var(--surface));
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-icon {
+  color: var(--primary);
+  margin-bottom: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.subtitle {
+  color: var(--on-surface-variant);
+  margin-top: 8px;
+}
