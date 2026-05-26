@@ -156,7 +156,7 @@ const UploadForm = () => {
                 id="name"
                 type="text" 
                 className="input-field" 
-                placeholder="E.g., Mostafa Tarek"
+                placeholder="E.g., Antigravity"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={isUploading}
