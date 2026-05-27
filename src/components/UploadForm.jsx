@@ -75,7 +75,7 @@ const UploadForm = () => {
       formData.append('key', apiKey);
       formData.append('image', file);
       // We cleverly store the name and branch as the image name in ImgBB!
-      formData.append('name', `${name} - ${branch} (Seniors 2027)`);
+      formData.append('name', `${name} - ${branch} (Memories Gallery)`);
 
       const response = await fetch('https://api.imgbb.com/1/upload', {
         method: 'POST',
@@ -92,6 +92,7 @@ const UploadForm = () => {
           name,
           branch,
           imageUrl: url,
+          type: 'Memories Gallery',
           createdAt: Date.now()
         });
 
